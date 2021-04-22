@@ -2,11 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 0;
   border-bottom: 1px solid #2e2e2e;
   position: relative;
-  width: 90%;
-  margin: 0 auto;
 }
 
 .logo {
@@ -23,7 +21,7 @@
   font-size: 1.6rem;
   font-weight: 400;
   color: #2e2e2e;
-  padding: 1.5rem 1.7rem;
+  padding: 0 1.7rem;
 }
 
 .link:hover,
