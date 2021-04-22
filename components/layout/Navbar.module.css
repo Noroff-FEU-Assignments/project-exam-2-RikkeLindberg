@@ -9,29 +9,29 @@
   margin: 0 auto;
 }
 
-.navlogo {
+.logo {
   font-size: 3rem;
   font-weight: 500;
   color: #2e2e2e;
 }
 
-.nav_list {
+.list {
   display: flex;
 }
 
-.nav_link {
+.link {
   font-size: 1.6rem;
   font-weight: 400;
   color: #2e2e2e;
   padding: 1.5rem 1.7rem;
 }
 
-.nav_link:hover,
-.nav_link:focus {
+.link:hover,
+.link:focus {
   color: #ff00b3;
 }
 
-.nav_btn {
+.btn {
   font-size: 1.6rem;
   font-weight: 400;
   color: #2e2e2e;
@@ -42,7 +42,7 @@
   text-align: center;
 }
 
-.nav_item .nav_btn {
+.item .btn {
   display: none;
 }
 
@@ -52,7 +52,7 @@
   outline: none;
 }
 
-.toggle_bar {
+.bar {
   display: block;
   width: 35px;
   height: 3px;
@@ -63,11 +63,11 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .navlogo {
+  .logo {
     order: 1;
   }
 
-  .nav_list {
+  .list {
     position: absolute;
     left: -110%;
     top: 5.8rem;
@@ -78,19 +78,19 @@
     padding: 1rem 0;
   }
 
-  .nav_list.active {
+  .list.active {
     left: 0;
   }
 
-  .nav_link {
+  .link {
     width: 100%;
   }
 
-  .nav_btn {
+  .btn {
     display: none;
   }
 
-  .nav_item .nav_btn {
+  .item .btn {
     display: block;
     margin: 1rem 0 0 1.7rem;
   }
@@ -100,16 +100,16 @@
     cursor: pointer;
   }
 
-  .toggle.active .toggle_bar:nth-child(2) {
+  .toggle.active .bar:nth-child(2) {
     opacity: 0;
   }
 
-  .toggle.active .toggle_bar:nth-child(1) {
+  .toggle.active .bar:nth-child(1) {
     -webkit-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
   }
 
-  .toggle.active .toggle_bar:nth-child(3) {
+  .toggle.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
   }
