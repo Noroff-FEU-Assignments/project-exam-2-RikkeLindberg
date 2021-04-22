@@ -72,10 +72,5 @@ main {
 
 footer {
   display: flex;
-  justify-content: center;
   flex-shrink: 0;
-  padding: 2rem 0;
-  background: #1d2a28;
-  font-size: 1.2rem;
-  color: #f1f1f1;
 }
