@@ -4,9 +4,9 @@ import styles from './Banner.module.css';
 
 export default function Banner() {
     return (
-        <section id="home" className={styles.section}>
+        <div id="home" className={styles.section}>
                     <Searchbar type="text" text="search" className={styles.searchbar} />
                     <Hero className={styles.hero} />
-        </section>
+        </div>
     )
 }
