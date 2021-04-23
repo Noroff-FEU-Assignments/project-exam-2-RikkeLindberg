@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 12rem auto 0 auto;
+  padding: 5rem;
+  background: linear-gradient(rgba(255, 0, 174, 0.3), rgba(255, 0, 174, 0.3)),
+    url("/img/mao-yuqing-15_sm282qAE-unsplash.jpg");
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  max-width: 80rem;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.container h1 {
+  position: relative;
+  z-index: 1000;
+}
+
+.container::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  max-width: 60rem;
+  background-color: rgba(251, 251, 251, 0.9);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.form {
+  width: 100%;
+  margin-top: 6rem;
+  position: relative;
+  z-index: 1000;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.form input {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.form input,
+.form textarea {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  background-color: transparent;
+  outline: none;
+  font-size: 1.6rem;
+  max-width: 30rem;
+}
+
+.form textarea {
+  font-family: inherit;
+  margin-bottom: 1.5rem;
+}
