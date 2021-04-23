@@ -15,5 +15,5 @@ export default function Searchbar({ type, text }) {
 
 Searchbar.propTypes = {
 	type: PropTypes.string.isRequired,
-    placeholder: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
 };
