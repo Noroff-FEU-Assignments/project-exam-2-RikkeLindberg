@@ -1,0 +1,1 @@
+export const BASE_URL = "https://project-exam-2-holidaze.herokuapp.com/";
