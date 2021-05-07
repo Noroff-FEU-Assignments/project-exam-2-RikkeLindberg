@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useContext  } from "react";
+import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import AuthorisationContext from "../../context/AuthorisationContext";
@@ -19,7 +19,6 @@ export default function LoginForm() {
 
     const [auth, setAuth] = useContext(AuthorisationContext);
 
-
     async function onSubmit(data) {
 		setSubmitting(true);
 		setLoginError(null);
@@ -27,12 +26,12 @@ export default function LoginForm() {
 		console.log(data);
 
 		try {
-			const response = await axios.post(url, {
-				identifier: username,
-				password: password,
+			const response = await axios.post( url, { 
+				identifier: 'admin', 
+				password: 'AdminAuth1234' 	
 			});
 			console.log(response.data);
-            setAuth(response.jwt);
+            setAuth(response.data.jwt);
 			router.push("/admin");
 		} catch (error) {
 			console.log("error", error);
@@ -51,8 +50,8 @@ export default function LoginForm() {
 					<div>
                         <label htmlFor="username">Username:</label>
 						<input 
-							name="username" 
-                            {...register('You must enter a username', { required: true })} />
+							name="username"
+                            {...register('username', { required: true })} />
 						{ errors.username && <p>{ errors.username.message }</p> }
 					</div>
 
@@ -60,8 +59,8 @@ export default function LoginForm() {
                         <label htmlFor="password">Password:</label>
 						<input 
 							name="password" 
-							type="password" 
-                            {...register('You must enter a password', { required: true })} />
+							type="password"
+                            {...register('password', { required: true })} />
 						{ errors.password && <p>{ errors.password.message }</p> }
 					</div>
 					<button disabled={ submitting }>Login</button>

@@ -18,7 +18,7 @@ export default function Navbar() {
 
     function logout() {
         setAuth(null);
-        router.push("/");
+        router.push("/login");
     }
 
     return (
