@@ -19,16 +19,14 @@ export default function LoginForm() {
 
     const [auth, setAuth] = useContext(AuthorisationContext);
 
-    async function onSubmit(data) {
+    async function onSubmit({username, password}) {
 		setSubmitting(true);
 		setLoginError(null);
 
-		console.log(data);
-
 		try {
 			const response = await axios.post( url, { 
-				identifier: 'admin', 
-				password: 'AdminAuth1234' 	
+				identifier: username, 
+				password: password 	
 			});
 			console.log(response.data);
             setAuth(response.data.jwt);
