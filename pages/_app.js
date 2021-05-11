@@ -1,14 +1,14 @@
-import { AuthorisationProvider } from "../context/AuthorisationContext";
+import { AuthProvider } from "../context/AuthContext";
 import Layout from '../components/layout/Layout';
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AuthorisationProvider>
+    <AuthProvider>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </AuthorisationProvider>
+    </AuthProvider>
   )
 }
 
