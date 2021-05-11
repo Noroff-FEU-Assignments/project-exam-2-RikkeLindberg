@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import AuthorisationContext from "../../context/AuthorisationContext";
+import AuthContext from "../../context/AuthContext";
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -12,7 +12,7 @@ export default function Navbar() {
        setToggled(!toggled); 
     }
 
-    const [auth, setAuth] = useContext(AuthorisationContext);
+    const [auth, setAuth] = useContext(AuthContext);
 
     const router = useRouter();
 
@@ -32,8 +32,8 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li className={styles.item} onClick={() => handleToggle()}>
-                        <Link href="/hotels">
-                            <a className={styles.link}>Hotels</a>
+                        <Link href="/establishments">
+                            <a className={styles.link}>Establishments</a>
                         </Link>
                     </li>
                     <li className={styles.item} onClick={() => handleToggle()}>
@@ -41,6 +41,7 @@ export default function Navbar() {
                             <a className={styles.link}>Contact</a>
                         </Link>
                     </li>
+
                     { auth ? (
                     <>
                         <li className={styles.item} onClick={() => handleToggle()}>
@@ -48,9 +49,9 @@ export default function Navbar() {
                         </li> 
                         <button onClick={logout}>Log out</button>
                     </> 
-                    ) : (<li className={styles.item} onClick={() => handleToggle()}>
-                            <Link href="/login"><a className={styles.btn}>Login</a></Link>
-                        </li>) 
+                    ) : (   <li className={styles.item} onClick={() => handleToggle()}>
+                                <Link href="/login"><a className={styles.btn}>Login</a></Link>
+                            </li>) 
                     } 
                 </ul>
 
