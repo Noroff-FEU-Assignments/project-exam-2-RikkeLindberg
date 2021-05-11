@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
-import AuthorisationContext from "../../context/AuthorisationContext";
+import AuthContext from "../../context/AuthContext";
 import { BASE_URL } from "../../constants/api";
 import Heading from '../typography/Heading';
 import styles from "./Forms.module.css";
@@ -17,7 +17,7 @@ export default function LoginForm() {
 
     const { register, handleSubmit, formState: { errors }  } = useForm();
 
-    const [auth, setAuth] = useContext(AuthorisationContext);
+    const [auth, setAuth] = useContext(AuthContext);
 
     async function onSubmit({username, password}) {
 		setSubmitting(true);
