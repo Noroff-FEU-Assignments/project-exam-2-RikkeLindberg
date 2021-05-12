@@ -43,15 +43,17 @@ export default function Navbar() {
                     </li>
 
                     { auth ? (
-                    <>
                         <li className={styles.item} onClick={() => handleToggle()}>
-                            <Link href="/admin"><a className={styles.btn}>Admin</a></Link>
+                            <Link href="/admin">
+                                <a className={styles.link}>Admin</a>
+                            </Link>
+                            <button onClick={logout}>Log out</button>
                         </li> 
-                        <button onClick={logout}>Log out</button>
-                    </> 
                     ) : (   <li className={styles.item} onClick={() => handleToggle()}>
-                                <Link href="/login"><a className={styles.btn}>Login</a></Link>
-                            </li>) 
+                                <Link href="/login">
+                                    <a className={styles.btn}>Login</a>
+                                </Link>
+                            </li> ) 
                     } 
                 </ul>
 
@@ -60,8 +62,6 @@ export default function Navbar() {
                     <span className={styles.bar}></span>
                     <span className={styles.bar}></span>
                 </button>
-
-                <Link href="/login"><a className={styles.btn}>Login</a></Link>
             </nav>
     )
 }
