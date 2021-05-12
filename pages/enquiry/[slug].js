@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useRouter } from 'next/router'
 import { BASE_URL } from "../../constants/api";
 import Heading from '../../components/typography/Heading';
 
@@ -30,16 +31,25 @@ export default function Enquiry() {
 		}
 	}
 
+    const router = useRouter();
+
+    const { slug } = router.query;
+
+    console.log({slug});
+
+    const slugName = slug.replace("-", " ");
+
     return (
         <>
             <Heading size="2" title="enquiry" />
                 <form onSubmit={handleSubmit(onSubmit)}>
-                { posted && <div className="success">The form was submitted</div> }
-				{ postError && <p>Sorry! wrong</p> }
+                { posted && <div>The form was submitted</div> }
+				{ postError && <div>Sorry! wrong</div> }
                     <div>
                         <label htmlFor="establishment">Establishment:</label>
                         <input 
                             name="establishment"
+                            defaultValue={slugName}
                             {...register('establishment', { required: true })} />
                         { errors.establishment && <p>{ errors.establishment.message }</p> }
                     </div>
