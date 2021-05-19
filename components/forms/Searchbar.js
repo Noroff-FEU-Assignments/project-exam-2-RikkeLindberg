@@ -1,7 +1,6 @@
-import styles from './Searchbar.module.css';
+import styles from './Searchbar.module.css'
 
 export default function Searchbar() {
-
     return (
         <form className={styles.form}>
             <input 
