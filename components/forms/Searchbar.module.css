@@ -1,10 +1,8 @@
 .form {
-  position: relative;
-  margin: 20% auto;
   width: 100%;
   max-width: 50rem;
-  padding: 0 1rem;
-  z-index: 100;
+  padding: 0 2rem;
+  z-index: 1000;
 }
 
 .input {
@@ -13,11 +11,22 @@
   border-radius: 6px;
   border: none;
   padding: 0 1rem;
-  background-color: rgba(250, 250, 250, 0.9);
+  background-color: #fafafa;
 }
 
-@media only screen and (max-height: 650px) {
+.input:focus {
+  outline: none;
+  border: 2px solid #0994b3;
+}
+
+@media only screen and (max-width: 640px), (max-height: 600px) {
   .form {
-    margin: 12% auto;
+    margin-top: 6rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .form {
+    padding: 0 1rem;
   }
 }
