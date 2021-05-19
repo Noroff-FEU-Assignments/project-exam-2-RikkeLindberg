@@ -1,13 +1,5 @@
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  position: relative;
-}
-
 .logo {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 500;
   color: #2e2e2e;
 }
@@ -17,10 +9,11 @@
 }
 
 .link {
+  display: flex;
   font-size: 1.6rem;
   font-weight: 400;
   color: #2e2e2e;
-  padding: 0 1.7rem;
+  padding: 0 1.5rem;
 }
 
 .link:hover,
@@ -28,74 +21,38 @@
   color: #ff00b3;
 }
 
-.btn {
-  font-size: 1.6rem;
-  font-weight: 400;
+.icon {
+  font-size: 1.7rem;
+  margin-right: 0.2rem;
   color: #2e2e2e;
-  border: 1px solid #2e2e2e;
-  border-radius: 6px;
-  padding: 0.5rem 0;
-  width: 8rem;
-  text-align: center;
-  display: block;
 }
 
-.toggle {
-  display: none;
-  border: none;
-  outline: none;
-}
-
-.bar {
-  display: block;
-  width: 35px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  background-color: #2e2e2e;
-}
-
-@media only screen and (max-width: 768px) {
-  .logo {
-    order: 1;
+@media only screen and (max-width: 750px) {
+  .nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 5.4rem;
+    width: 100%;
+    background-color: #fbfbfb;
+    border-top: 1px solid #7c7c7c;
   }
 
   .list {
-    position: absolute;
-    left: -110%;
-    top: 5.8rem;
-    flex-direction: column;
-    background-color: #999999;
-    width: 100%;
-    transition: 300ms;
-    padding: 1rem 0;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
   }
+}
 
-  .list.active {
-    left: 0;
-  }
-
+@media only screen and (max-width: 425px) {
   .link {
-    width: 100%;
+    font-size: 0;
   }
 
-  .toggle {
-    display: block;
-    cursor: pointer;
-  }
-
-  .toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .toggle.active .bar:nth-child(1) {
-    -webkit-transform: translateY(8px) rotate(45deg);
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .toggle.active .bar:nth-child(3) {
-    -webkit-transform: translateY(-8px) rotate(-45deg);
-    transform: translateY(-8px) rotate(-45deg);
+  .icon {
+    font-size: 2.3rem;
   }
 }
