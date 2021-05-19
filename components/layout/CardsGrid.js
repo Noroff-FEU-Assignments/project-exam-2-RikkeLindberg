@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import styles from './CardsGrid.module.css';
+import PropTypes from 'prop-types'
+import styles from './CardsGrid.module.css'
 
 export default function CardsGrid({ children }) {
     return (
