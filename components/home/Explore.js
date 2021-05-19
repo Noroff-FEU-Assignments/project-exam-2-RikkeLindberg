@@ -1,6 +1,6 @@
-import CardsGrid from '../layout/CardsGrid';
-import Card from '../ui/Card';
-import Heading from '../typography/Heading';
+import CardsGrid from '../layout/CardsGrid'
+import Card from '../ui/Card'
+import Heading from '../typography/Heading'
 
 export default function Explore() {
     return (
