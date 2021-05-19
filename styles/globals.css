@@ -71,6 +71,10 @@ li {
   list-style: none;
 }
 
+input {
+  font-size: 1.4rem;
+}
+
 #__next {
   display: flex;
   flex-direction: column;
