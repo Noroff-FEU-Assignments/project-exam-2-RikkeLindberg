@@ -1,12 +1,12 @@
 import Hero from './Hero';
-import Searchbar from '../forms/Searchbar';
 import styles from './Banner.module.css';
+import Searchbar from '../forms/Searchbar';
 
 export default function Banner() {
     return (
         <div className={styles.section}>
-                    <Searchbar type="text" text="search" className={styles.searchbar} />
                     <Hero className={styles.hero} />
+                    <Searchbar />
         </div>
     )
 }
