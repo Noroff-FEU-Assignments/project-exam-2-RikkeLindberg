@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import Button from '../ui/Button';
 import useAxios from '../../hooks/useAxios';
 
 
@@ -19,10 +18,13 @@ export default function AddEstablishment() {
         setAdded(false);
         reset();
 
-        console.log(data)
+        const formData = new FormData()
+        const file = image.files[0];
+        formData.append("files.image", file);
+        formData.append("data", JSON.stringify(data));
 
 		try {
-			const response = await http.post("establishments", data);
+			const response = await http.post("establishments", {data: formData});
 			console.log(response.data);
             setAdded(true);
 		} catch (error) {
@@ -90,21 +92,23 @@ export default function AddEstablishment() {
                     />
                     { errors.lng && <p>{ errors.lng.message }</p> }
                 </div>
-                <div>
-                    <label htmlFor="image">Image</label>
-                    <input
-                        type="file"
-                        name="image"
-                        {...register('image', { required: true })}
-                    />
-                    { errors.image && <p>{ errors.image.message }</p> }
-                </div>
+
                 <div>
                     <label htmlFor="description">Description</label>
                     <textarea
                         type="text"
                         name="description"
                         {...register('description', { required: true })}
+                    />
+                    { errors.description && <p>{ errors.description.message }</p> }
+                </div>
+                <div>
+                    <label htmlFor="file">Image</label>
+                    <input
+                        type="file"
+                        name="file"
+                        id="image"
+                        {...register('file', { required: true })}
                     />
                     { errors.description && <p>{ errors.description.message }</p> }
                 </div>
@@ -117,7 +121,7 @@ export default function AddEstablishment() {
                     ></input>
                     { errors.name && <p>{ errors.name.message }</p> }
                 </div>
-                <Button type="submit" disabled={ submitting }>Submit</Button>
+                <button type="submit" disabled={ submitting }>Submit</button>
             </form>
     )
 }
