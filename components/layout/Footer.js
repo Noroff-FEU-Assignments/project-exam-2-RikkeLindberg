@@ -1,12 +1,14 @@
-import { FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
-import styles from './Footer.module.css';
-import Link from 'next/link';
+import { FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa'
+import Link from 'next/link'
+import styles from './Footer.module.css'
 
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <div className={styles.container}>
-                <Link href="/"><a className={styles.logo}>Holidaze</a></Link>
+            <div>
+                <Link href="/">
+                    <a className={styles.logo}>Holidaze</a>
+                </Link>
 
                 <ul className={styles.list}>
                     <li className={styles.item}>
@@ -49,7 +51,9 @@ export default function Footer() {
                     </Link>
                 </div>
 
-                <small className={styles.copyright}>© 2021 Holidaze, Rikke Lindberg - Project Exam 2</small>
+                <small className={styles.copyright}>
+                    © 2021 Rikke Lindberg - Project Exam 2
+                </small>
             </div>
         </footer>
     )
