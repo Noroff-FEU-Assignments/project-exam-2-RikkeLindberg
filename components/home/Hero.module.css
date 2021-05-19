@@ -2,7 +2,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .hero h1,
@@ -29,9 +29,21 @@
   content: "";
   width: 0;
   height: 0;
-  border-right: 1100px solid transparent;
-  border-bottom: 460px solid rgba(9, 148, 179, 0.85);
+  border-right: 900px solid transparent;
+  border-bottom: 400px solid rgba(9, 148, 179, 0.85);
   bottom: 0;
   left: 0;
   position: absolute;
+}
+
+@media only screen and (max-width: 350px) {
+  .hero {
+    background-color: rgba(9, 148, 179, 0.85);
+    width: 100%;
+    padding: 3rem 1rem;
+  }
+
+  .hero::before {
+    display: none;
+  }
 }
