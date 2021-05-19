@@ -21,8 +21,8 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f1f1f1;
   color: #3a3a3a;
+  background-color: #fbfbfb;
 }
 
 h1 {
@@ -74,8 +74,21 @@ li {
 #__next {
   display: flex;
   flex-direction: column;
-  height: 100%;
   margin: 0 auto;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  position: absolute;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  background-color: #fbfbfb;
 }
 
 main {
@@ -96,4 +109,14 @@ section {
 footer {
   display: flex;
   flex-shrink: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  #__next {
+    padding-bottom: 5.4rem;
+  }
+
+  header {
+    background-color: transparent;
+  }
 }
