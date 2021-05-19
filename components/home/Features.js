@@ -1,11 +1,12 @@
-import { RiHotelFill, RiHome2Fill, RiHotelBedFill } from 'react-icons/Ri';
-import Heading from '../typography/Heading';
-import styles from './Features.module.css';
+import { RiHotelFill, RiHome2Fill, RiHotelBedFill } from 'react-icons/Ri'
+import Heading from '../typography/Heading'
+import styles from './Features.module.css'
 
 export default function Features() {
     return (
         <section className={styles.features}>
             <Heading size="2" title="What we can offer you" />
+
             <div className={styles.grid}>
                 <div className={styles.card}>
                     <RiHotelFill />
