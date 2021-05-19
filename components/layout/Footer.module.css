@@ -7,7 +7,7 @@
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 2.2rem;
   padding-bottom: 3rem;
 }
 
@@ -17,11 +17,11 @@
   border-bottom: 1px solid #fbfbfb;
   padding: 3rem 0;
   width: 100%;
-  max-width: 240px;
+  max-width: 268px;
 }
 
 .link {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .icons {
@@ -29,7 +29,7 @@
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
 
 .item:not(:last-of-type),
@@ -41,7 +41,7 @@
   font-size: 1.1rem;
 }
 
-@media only screen and (max-width: 270px) {
+@media only screen and (max-width: 330px) {
   .list {
     flex-direction: column;
   }
