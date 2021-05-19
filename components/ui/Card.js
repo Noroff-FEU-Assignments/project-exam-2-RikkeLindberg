@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from './Card.module.css';
+import PropTypes from 'prop-types'
+import Image from 'next/image'
+import Link from 'next/link'
+import styles from './Card.module.css'
 
 export default function Card({ src, alt, title, content, link, text }) {
     return (
