@@ -8,10 +8,10 @@ export default function Establishments({ results }) {
     console.log(results);
 
     return (
-        <>
+        <section>
             <Heading size="1" title="Establishments"/>
             <EstablishmentList results={ results }/>
-        </>
+        </section>
     )
 }
 
