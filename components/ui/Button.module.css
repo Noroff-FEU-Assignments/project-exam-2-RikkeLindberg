@@ -17,7 +17,7 @@
 
 .button:hover,
 .button:focus {
-  background-color: #00a2ff; /* change the direction of the change here */
+  background-color: #00a2ff;
 }
 
 .button:focus {
