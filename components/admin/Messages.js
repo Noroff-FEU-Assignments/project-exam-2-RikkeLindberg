@@ -12,21 +12,36 @@ export default function Messages() {
 	const http = useAxios();
 
 	useEffect(function () {
-		async function getMessages() {
-			try {
-				const response = await http.get("messages");
-				console.log("response", response);
-				setMessages(response.data);
-			} catch (error) {
-				console.log(error);
-				setError(error.toString());
-			} finally {
-				setLoading(false);
-			}
-		}
-
 		getMessages();
 	}, []);
+
+	async function getMessages() {
+
+		try {
+			const response = await http.get("messages");
+			console.log("response", response);
+			setMessages(response.data);
+		} catch (error) {
+			console.log(error);
+			setError(error.toString());
+		} finally {
+			setLoading(false);
+		}
+	}
+
+    async function deleteMessage(id) {
+		const confirmDelete = window.confirm("Delete this post?");
+
+		if (confirmDelete) {
+			try {
+				const response = await http.delete(`https://project-exam-2-holidaze.herokuapp.com/messages/${id}`);
+				console.log(response)
+				getMessages();
+			} catch (error) {
+				console.log(error);
+			}
+		}
+	}
 
 	if (loading) return <div>Loading messages...</div>;
 
@@ -54,6 +69,7 @@ export default function Messages() {
 							<Link href={`mailto: ${message.email}`}>
 								<a className={styles.link}>Reply</a>
 							</Link>
+							<button onClick={() => deleteMessage(message.id)}>Delete</button>
 						</li>
 					);
 				})}
