@@ -1,27 +1,27 @@
-import { useContext } from "react";
+import { useContext } from 'react'
 import { useRouter } from 'next/router'
-import Heading from '../components/typography/Heading'
-import Enquiries from '../components/admin/Enquiries'
-import Messages from '../components/admin/Messages'
+import AuthContext from '../context/AuthContext'
 import Button from '../components/ui/Button'
-import AuthContext from "../context/AuthContext";
-import FourOhFour from "./404";
+import Enquiries from '../components/admin/Enquiries'
+import FourOhFour from './404'
+import Heading from '../components/typography/Heading'
+import Messages from '../components/admin/Messages'
 
 export default function Admin() {
-    const [auth, setAuth] = useContext(AuthContext);
+    const [auth, setAuth] = useContext(AuthContext)
 
-    const router = useRouter();
+    const router = useRouter()
 
     function logout() {
-        setAuth(null);
-        router.push("/login");
+        setAuth(null)
+        router.push('/login')
     }
 
     return (
-        <>
+        <section>
             { auth ? (
                 <div>
-                    <Heading size="1" title="Admin"/>
+                    <Heading size='1' title='Admin'/>
                     <button onClick={logout}>Log out</button>
                     <Button link="/createNew">Create New</Button>
                     <Messages />
@@ -31,6 +31,6 @@ export default function Admin() {
                 <FourOhFour /> 
                 )
             }
-        </>
+        </section>
     )
 }
