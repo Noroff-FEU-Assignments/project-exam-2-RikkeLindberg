@@ -1,18 +1,22 @@
 import axios from 'axios';
+import Image from 'next/image'
 import Link from 'next/link'
-import Heading from '../../components/typography/Heading';
-import { BASE_URL } from '../../constants/api';
+import Heading from '../../components/typography/Heading'
+import { BASE_URL } from '../../constants/api'
 
 export default function Result({ result }) {
     console.log(result);
     return (
-        <>
+        <section>
             <div>
                 <Heading size="2" title={ result.name } />
+                <Image src={ result.image.formats.small.url } width="300" height="300" alt={ result.name } />
                 <div>{result.description}</div>
+                <div>{result.price}</div>
+                <div>{result.type}</div>
             </div>
             <Link href={`/enquiry/${result.slug}`}>enquiry</Link>
-        </>
+        </section>
     );
 }
 
