@@ -1,11 +1,12 @@
-import axios from "axios";
-import { useState, useContext } from "react";
-import { useForm } from "react-hook-form";
-import { useRouter } from "next/router";
-import AuthContext from "../../context/AuthContext";
-import { BASE_URL } from "../../constants/api";
-import Heading from '../typography/Heading';
-import styles from "./Forms.module.css";
+import axios from 'axios'
+import { useState, useContext } from 'react'
+import { useForm } from 'react-hook-form'
+import { useRouter } from 'next/router'
+import AuthContext from '../../context/AuthContext'
+import Heading from '../typography/Heading'
+import FormButton from '../ui/FormButton'
+import { BASE_URL } from '../../constants/api'
+import styles from './Forms.module.css'
 
 const url = BASE_URL + "auth/local";
 
@@ -44,24 +45,30 @@ export default function LoginForm() {
             <Heading size="1" title="Login" />
 
             <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-				{ loginError && <p>Sorry! Wrong username or password</p> }
+				{ loginError && <p className={styles.error}>Sorry, wrong username or password, please provide the correct credentials</p> }
+
 					<div>
                         <label htmlFor="username">Username:</label>
+						{ errors.username && errors.username.type === "required" && <p className={styles.error}>Please provide your username</p> }
 						<input 
-							name="username"
-                            {...register('username', { required: true })} />
-						{ errors.username && <p>{ errors.username.message }</p> }
+							id="username"
+							type="text"
+                            {...register('username', { required: true })} 
+						/>
 					</div>
 
 					<div>
                         <label htmlFor="password">Password:</label>
+						{ errors.password && errors.password.type === "required" && <p className={styles.error}>Please provide your password</p> }
 						<input 
-							name="password" 
+							id="password" 
 							type="password"
-                            {...register('password', { required: true })} />
-						{ errors.password && <p>{ errors.password.message }</p> }
+                            {...register('password', { required: true })} 
+						/>
 					</div>
-					<button disabled={ submitting }>Login</button>
+
+					<FormButton type="submit" disabled={ submitting }>Login</FormButton>
+
 			</form>
         </div>
     )
