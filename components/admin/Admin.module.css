@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  color: #3a3a3a;
+  padding: 1.5rem;
+  background-color: #dadada;
+  margin-bottom: 1rem;
+}
+
+.item div {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.item div:not(:last-of-type) {
+  margin-bottom: 0.8rem;
+}
+
+.item div span {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.link {
+  margin-top: 1rem;
+  color: #ff00ae;
+}
