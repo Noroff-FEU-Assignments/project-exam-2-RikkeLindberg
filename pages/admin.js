@@ -20,13 +20,16 @@ export default function Admin() {
     return (
         <section>
             { auth ? (
-                <div>
-                    <Heading size='1' title='Admin'/>
-                    <button onClick={logout}>Log out</button>
+                <>
+                    <Heading size="1" title="Admin dashboard" />
+                    <button className="logout" onClick={logout}>Log out</button>
+
                     <Button link="/createNew">Create New</Button>
-                    <Messages />
-                    <Enquiries />
-                </div>
+                    <div className="admin">
+                        <Messages />
+                        <Enquiries />
+                    </div>
+                </>
             ) : ( 
                 <FourOhFour /> 
                 )

@@ -26,6 +26,7 @@ body {
 }
 
 h1 {
+  text-transform: capitalize;
   font-size: min(max(3rem, 4vw), 4rem);
 
   @supports (font-size: clamp(3rem, 4vw, 4rem)) {
@@ -79,6 +80,35 @@ input {
   font-size: 1.4rem;
 }
 
+button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+
+  transition: 300ms;
+  cursor: pointer;
+  outline: none;
+}
+
+.logout {
+  max-width: 10rem;
+  height: 3rem;
+  background-color: #c7c7c7;
+  margin-bottom: 5rem;
+  margin-top: 0.5rem;
+}
+
+.logout:hover,
+.logout:focus {
+  background-color: #ff00ae;
+  color: #fbfbfb;
+}
+
 #__next {
   display: flex;
   flex-direction: column;
@@ -102,16 +132,21 @@ header {
 main {
   flex: 1 0 auto;
   margin-bottom: 12rem;
+  min-height: 100vh;
+  padding: 0 1rem;
 }
 
 section {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  padding: 0 1rem;
+  margin: 5.6rem auto 0 auto;
   justify-content: center;
-  min-height: calc(100vh - 5.6rem);
   max-width: 1310px;
+}
+
+.admin {
+  display: flex;
+  margin-top: 5rem;
 }
 
 footer {

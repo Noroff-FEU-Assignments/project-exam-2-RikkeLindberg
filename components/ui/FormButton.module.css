@@ -1,21 +1,10 @@
 .button {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 1.6rem;
-
   height: 45px;
-  width: 100%;
   max-width: 180px;
   margin-top: 1.5rem;
 
   background-color: #ff00ae;
   color: #fbfbfb;
-
-  border: none;
-  border-radius: 1rem;
-
-  transition: 300ms;
-  cursor: pointer;
 }
 
 .button:hover,

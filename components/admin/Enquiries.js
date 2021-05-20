@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
-import useAxios from '../../hooks/useAxios';
+import { useState, useEffect } from 'react'
+import Heading from '../typography/Heading'
+import useAxios from '../../hooks/useAxios'
+import styles from './Admin.module.css'
 
 export default function Enquiries() {
     const [enquiries, setEnquiries] = useState([]);
@@ -30,15 +32,34 @@ export default function Enquiries() {
 	if (error) return <div>{}</div>;
 
 	return (
-		<ul>
-			{enquiries.map((enquiry) => {
-				return (
-					<li key={enquiry.id}>
-						<p>{enquiry.establishment}</p>
-						<p>{enquiry.email}</p>
-					</li>
-				);
-			})}
-		</ul>
+		<div className={styles.container}>
+			<Heading size="3" title="Enquiries" />
+			<ul className={styles.list}>
+				{enquiries.map((enquiry) => {
+					return (
+						<li key={enquiry.id} className={styles.item}>
+							<div>
+								<span>Establishment:</span> {enquiry.establishment}
+							</div>
+							<div>
+								<span>Name:</span> {enquiry.name}
+							</div>
+							<div>
+								<span>Email:</span> {enquiry.email}
+							</div>
+							<div>
+								<span>Check in:</span> {enquiry.check_in}
+							</div>
+							<div>
+								<span>Check out:</span> {enquiry.check_out}
+							</div>
+							<div>
+								<span>Message:</span> {enquiry.message}
+							</div>
+						</li>
+					);
+				})}
+			</ul>
+		</div>
 	);
 }
