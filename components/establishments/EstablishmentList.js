@@ -1,6 +1,6 @@
-import Link from "next/link";
-import Image from 'next/image';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
+import Link from 'next/link'
+import Image from 'next/image'
 
 function EstablishmentList({ results }) {
     return (
@@ -10,10 +10,11 @@ function EstablishmentList({ results }) {
                     <div key={ result.id }>
                         <Link href={ `/result/${result.id}` }>
                             <a>
-                                <Image src={ result.image.formats.small.url } width="300" height="300" alt="name" />
+                                <Image src={ result.image.formats.small.url } width="300" height="300" alt={ result.name } />
                                 <div>
                                     <h3>{ result.name }</h3>
                                     <div>{ result.address }</div>
+                                    <div>{ result.price }</div>
                                 </div>
                             </a>
                         </Link>
