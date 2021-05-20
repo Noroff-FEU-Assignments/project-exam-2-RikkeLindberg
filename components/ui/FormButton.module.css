@@ -8,18 +8,15 @@
   font-weight: 500;
   font-size: 1.6rem;
   background-color: #ff00ae;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   transition: 300ms;
   background-size: 200% auto;
   color: #fbfbfb;
   cursor: pointer;
-  outline: none;
 }
 
 .button:hover,
 .button:focus {
-  background-color: #00a2ff;
-}
-
-.button:focus {
-  outline: 2px solid #ff00ae;
+  box-shadow: none;
 }
