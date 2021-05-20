@@ -26,10 +26,11 @@
 .form label {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .form input {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.2rem;
   padding: 0.5rem 0;
 }
 
@@ -45,4 +46,27 @@
 .form textarea {
   font-family: inherit;
   margin-bottom: 1.5rem;
+}
+
+.error,
+.warning,
+.success {
+  color: #fbfbfb;
+  padding: 0.5rem;
+}
+
+.error {
+  background-color: #ff0000;
+  margin-bottom: 0.5rem;
+  max-width: fit-content;
+}
+
+.warning {
+  background-color: #ff9d00;
+  margin-bottom: 0.5rem;
+  max-width: fit-content;
+}
+
+.success {
+  background-color: #058b0c;
 }
