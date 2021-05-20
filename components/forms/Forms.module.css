@@ -1,17 +1,20 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 12rem auto 0 auto;
-  padding: 5rem;
+  padding: 5rem 1rem 6rem 1rem;
   width: 100%;
-  max-width: 80rem;
-  border-radius: 1rem;
+  max-width: 50rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .form {
   width: 100%;
+  max-width: 35rem;
   margin-top: 6rem;
 }
 
@@ -37,7 +40,6 @@
   background-color: transparent;
   outline: none;
   font-size: 1.6rem;
-  max-width: 30rem;
 }
 
 .form textarea {
