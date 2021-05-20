@@ -1,22 +1,24 @@
 .button {
-  height: 45px;
-  width: 100%;
-  max-width: 200px;
-  border: none;
-  border-radius: 1rem;
   font-family: inherit;
   font-weight: 500;
   font-size: 1.6rem;
+
+  height: 45px;
+  width: 100%;
+  max-width: 180px;
+  margin-top: 1.5rem;
+
   background-color: #ff00ae;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  transition: 300ms;
-  background-size: 200% auto;
   color: #fbfbfb;
+
+  border: none;
+  border-radius: 1rem;
+
+  transition: 300ms;
   cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
-  box-shadow: none;
+  background-color: #00a2ff;
 }
