@@ -1,0 +1,25 @@
+.button {
+  height: 45px;
+  width: 100%;
+  max-width: 200px;
+  border: none;
+  border-radius: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.6rem;
+  background-color: #ff00ae;
+  transition: 300ms;
+  background-size: 200% auto;
+  color: #fbfbfb;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #00a2ff;
+}
+
+.button:focus {
+  outline: 2px solid #ff00ae;
+}
