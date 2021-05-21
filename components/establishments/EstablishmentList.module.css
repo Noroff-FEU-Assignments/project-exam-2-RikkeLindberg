@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #fbfbfb;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card h4 {
+  position: absolute;
+  left: 0;
+  top: 21rem;
+  color: #f1f1f1;
+  background-color: #0995b3;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+}
+
+.paragraph:first-of-type {
+  padding-top: 2.5rem;
+}
+
+.paragraph {
+  display: flex;
+  padding: 0 1rem 0.6rem 1rem;
+  text-transform: capitalize;
+}
+
+.paragraph span {
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+
+.icon {
+  font-size: 2.2rem;
+  color: #ff00ae;
+  margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .card h4 {
+    top: 28rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .card h4 {
+    position: unset;
+    margin-top: -0.4rem;
+  }
+
+  .paragraph:first-of-type {
+    padding-top: 1.5rem;
+  }
+}
