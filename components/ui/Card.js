@@ -1,3 +1,4 @@
+import { BiLinkExternal } from 'react-icons/bi';
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,7 +10,12 @@ export default function Card({ src, alt, title, content, link, text }) {
             <Image className={styles.img} src={ src } width="400" height="300" alt={alt} />
             <h4 className={styles.heading}>{ title }</h4>
             <p className={styles.paragraph}>{ content }</p>
-            <Link href={ link }><a className={styles.btn} target="_blank">{ text }</a></Link>
+            <Link href={ link }>
+                <a className={styles.btn} target="_blank">
+                    { text } 
+                    <BiLinkExternal className={styles.icon} />
+                </a>
+            </Link>
         </div>
     )
 }
