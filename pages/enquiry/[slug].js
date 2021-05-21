@@ -50,11 +50,13 @@ export default function Enquiry() {
 
                     <div>
                         <label htmlFor="establishment">Establishment:</label>
+                        { errors.establishment && errors.establishment.type === "required" && <p>This field is required</p> }
                         <input 
                             name="establishment"
-                            disabled
                             defaultValue={slugName}
-                            {...register('establishment')} />
+                            {...register('establishment', { 
+                                required: true,
+                            })} />
                     </div>
 
 					<div>
