@@ -16,7 +16,7 @@
 .heading {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 21rem;
   color: #f1f1f1;
   background-color: #0995b3;
   width: fit-content;
@@ -28,12 +28,18 @@
 }
 
 .btn {
+  display: flex;
   margin: auto 1rem 1rem 1rem;
   padding: 1rem 1.5rem;
   max-width: fit-content;
   background-color: #ff0066;
   color: #fbfbfb;
   border-radius: 1rem;
+}
+
+.icon {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
 }
 
 @media only screen and (max-width: 700px) {
