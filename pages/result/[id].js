@@ -1,21 +1,49 @@
 import axios from 'axios';
+import { BiPurchaseTag, BiUser } from 'react-icons/bi';
 import Image from 'next/image'
 import Link from 'next/link'
+import Button from '../../components/ui/Button';
 import Heading from '../../components/typography/Heading'
 import { BASE_URL } from '../../constants/api'
+import styles from './result.module.css'
 
 export default function Result({ result }) {
     console.log(result);
     return (
-        <section>
-            <div>
-                <Heading size="2" title={ result.name } />
-                <Image src={ result.image.formats.small.url } width="300" height="300" alt={ result.name } />
-                <div>{result.description}</div>
-                <div>{result.price}</div>
-                <div>{result.type}</div>
+        <section className={styles.container}>
+            <Link href="/establishments">
+                <a>
+                    Go back
+                </a>
+            </Link>
+
+            <div className={styles.grid}>
+                <Heading size="3" title={ result.name } />
+
+                <div className={styles.image}>
+                    <Image src={ result.image.formats.small.url } width="500" height="400" alt={ result.name } />
+                </div>
+                    <p><span>{result.address}</span></p>
+
+                    <p>{result.description}</p>
+
+                    <div className={styles.paragraphs}>
+                        <p>
+                            <BiUser className={styles.icon} />
+                            <span>Max guests: </span> 
+                            {result.max_guests}
+                        </p>
+                        <p>
+                            <BiPurchaseTag className={styles.icon} />
+                            <span>Per night: </span>
+                            {result.price} NOK
+                        </p>
+                    </div>
+
+                    <Button link={`/enquiry/${result.slug}`}>
+                        Book today
+                    </Button>
             </div>
-            <Link href={`/enquiry/${result.slug}`}>enquiry</Link>
         </section>
     );
 }
