@@ -12,7 +12,7 @@ function EstablishmentList({ results }) {
 				return ( 
                     <div key={ result.id } className={styles.card}>
                         <Link href={ `/result/${result.id}` }>
-                            <a>
+                            <a className={styles.link}>
                                 <Image src={ result.image.formats.small.url } 
                                         width="400" 
                                         height="300" 
