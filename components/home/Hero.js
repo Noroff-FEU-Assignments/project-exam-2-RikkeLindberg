@@ -10,7 +10,7 @@ export default function Hero() {
             <Paragraph content="Visit Bergen and find the way you 
                                 want to live on vacation either it is in a hotel, 
                                 B&B or a guesthouse we got you covered."/>
-            <Button variant="btn-cta" link="/hotels">See all hotels</Button>
+            <Button link="/hotels">See all hotels</Button>
         </div>
     )
 }
