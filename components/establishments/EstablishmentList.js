@@ -1,27 +1,38 @@
+import { BiMap, BiPurchaseTag } from 'react-icons/bi';
 import PropTypes from 'prop-types'
-import Link from 'next/link'
+import Heading from '../typography/Heading'
 import Image from 'next/image'
+import Link from 'next/link'
+import styles from './EstablishmentList.module.css'
 
 function EstablishmentList({ results }) {
     return (
-        <div>
+        <>
             {results.map((result) => {
 				return ( 
-                    <div key={ result.id }>
+                    <div key={ result.id } className={styles.card}>
                         <Link href={ `/result/${result.id}` }>
                             <a>
-                                <Image src={ result.image.formats.small.url } width="300" height="300" alt={ result.name } />
-                                <div>
-                                    <h3>{ result.name }</h3>
-                                    <div>{ result.address }</div>
-                                    <div>{ result.price }</div>
-                                </div>
+                                <Image src={ result.image.formats.small.url } 
+                                        width="400" 
+                                        height="300" 
+                                        alt={ result.name }
+                                        className={styles.img} 
+                                    />
+                                    <Heading size="4" title={ result.name }/>
+                                    <p className={styles.paragraph}> 
+                                        { result.address }
+                                    </p>
+                                    <p className={styles.paragraph}>
+                                        <BiPurchaseTag className={styles.icon} /> 
+                                        <span>Nok</span> { result.price }
+                                    </p>
                             </a>
                         </Link>
                     </div>
                 );
 			})}
-        </div>
+        </>
     );
 }
 
