@@ -5,8 +5,25 @@
   background-color: #fbfbfb;
   border-radius: 1rem;
   padding-bottom: 1rem;
+}
+
+.link {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.link:hover,
+.link:focus {
+  box-shadow: none;
+}
+
+.link:hover h4,
+.link:focus h4 {
+  background-color: #ff00ae;
+}
+
+.link:active h4 {
+  background-color: #990069;
 }
 
 .img {
@@ -22,6 +39,7 @@
   background-color: #0995b3;
   width: fit-content;
   padding: 0.5rem 1rem;
+  transition: 300ms;
 }
 
 .paragraph:first-of-type {
