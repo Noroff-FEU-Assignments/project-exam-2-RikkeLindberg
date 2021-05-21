@@ -1,4 +1,4 @@
-import { BiMap, BiPurchaseTag } from 'react-icons/bi';
+import { BiPurchaseTag } from 'react-icons/bi';
 import PropTypes from 'prop-types'
 import Heading from '../typography/Heading'
 import Image from 'next/image'
