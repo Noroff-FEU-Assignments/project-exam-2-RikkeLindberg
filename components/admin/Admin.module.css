@@ -5,9 +5,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  max-width: 50rem;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin: 1rem 2rem 3rem 0;
 }
 
 .item {
@@ -17,25 +15,35 @@
   color: #3a3a3a;
   padding: 1.5rem;
   background-color: #dadada;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .item div {
   display: flex;
   flex-direction: column;
+  padding: 0.8rem 0;
   border-bottom: 1px solid #3a3a3a;
-}
-
-.item div:not(:last-of-type) {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .item div span {
   font-weight: 500;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
-.link {
+.item button {
   margin-top: 1rem;
-  color: #ff00ae;
+}
+
+.delete {
+  height: 3.5rem;
+  max-width: 20rem;
+  color: #fbfbfb;
+  background-color: #d30000;
+}
+
+@media only screen and (max-width: 750px) {
+  .list {
+    margin: 1rem 0 3rem 0;
+  }
 }
