@@ -1,6 +1,9 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import useAxios from '../../hooks/useAxios';
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import FormButton from '../ui/FormButton'
+import Heading from '../typography/Heading'
+import useAxios from '../../hooks/useAxios'
+import styles from '../forms/Forms.module.css'
 
 
 export default function AddEstablishment() {
@@ -36,93 +39,87 @@ export default function AddEstablishment() {
 	}
 
     return (
-            <form onSubmit={handleSubmit(onSubmit)}>
-            { added && <div>The form was submitted</div> }
-			{ addError && <div>Sorry! wrong</div> }
+        <div className={styles.container}>
+            <Heading size="1" title="Create new"/>
+
+            <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+            { added && <p className={styles.success}>The form was submitted</p> }
+			{ addError && <p className={styles.error}>Sorry, something went wrong!</p> }
+                
                 <div>
                     <label htmlFor="name">Name</label>
+                    { errors.name && errors.name.type === "required" && <p className={styles.error}>This field is required</p> }
                     <input 
                         type="text" 
                         name="name" 
                         {...register('name', { required: true })}
                     />
-                    { errors.name && <p>{ errors.name.message }</p> }
                 </div>
+
                 <div>
                     <label htmlFor="address">Address</label>
+                    { errors.address && errors.address.type === "required" && <p className={styles.error}>This field is required</p> }
                     <input 
                         type="text" 
                         name="address"
                         {...register('address', { required: true })}
                     />
-                    { errors.address && <p>{ errors.address.message }</p> }
                 </div>
+
                 <div>
                     <label htmlFor="price">Price</label>
+                    { errors.price && errors.price.type === "required" && <p className={styles.error}>This field is required</p> }
                     <input 
                         type="number" 
                         name="price"
                         {...register('price', { required: true })}
                     />
-                    { errors.price && <p>{ errors.price.message }</p> }
                 </div>
+
                 <div>
                     <label htmlFor="max_guests">Max guests</label>
+                    { errors.max_guests && errors.max_guests.type === "required" && <p className={styles.error}>This field is required</p> }
                     <input
                         name="max_guests"
                         {...register('max_guests', { required: true })}
                     />
-                    { errors.max_guests && <p>{ errors.max_guests.message }</p> }
-                </div>
-                <div>
-                    <label htmlFor="lat">Latitude</label>
-                    <input
-                        type="number"
-                        name="lat"
-                        {...register('lat', { required: true })}
-                    />
-                    { errors.lat && <p>{ errors.lat.message }</p> }
-                </div>
-                <div>
-                    <label htmlFor="lng">Longitude</label>
-                    <input
-                        type="number"
-                        name="lng"
-                        {...register('lng', { required: true })}
-                    />
-                    { errors.lng && <p>{ errors.lng.message }</p> }
                 </div>
 
                 <div>
                     <label htmlFor="description">Description</label>
+                    { errors.descriptions && errors.description.type === "required" && <p className={styles.error}>This field is required</p> }
                     <textarea
                         type="text"
                         name="description"
                         {...register('description', { required: true })}
                     />
-                    { errors.description && <p>{ errors.description.message }</p> }
                 </div>
+
                 <div>
                     <label htmlFor="file">Image</label>
+                    { errors.file && errors.file.type === "required" && <p className={styles.error}>This field is required</p> }
                     <input
                         type="file"
                         name="file"
                         id="image"
                         {...register('file', { required: true })}
                     />
-                    { errors.description && <p>{ errors.description.message }</p> }
                 </div>
+
                 <div>
                     <label htmlFor="slug">Slug</label>
+                    { errors.slug && errors.slug.type === "required" && <p className={styles.error}>This field is required</p> }
                     <input 
                         type="text" 
                         name="slug" 
                         {...register('slug', { required: true })}
-                    ></input>
-                    { errors.name && <p>{ errors.name.message }</p> }
+                    />
                 </div>
-                <button type="submit" disabled={ submitting }>Submit</button>
+
+                <FormButton type="submit" disabled={ submitting }>Submit</FormButton>
+
             </form>
+        </div>
     )
 }
 
