@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import Button from '../ui/Button'
 import Heading from '../typography/Heading'
 import useAxios from '../../hooks/useAxios'
 import styles from './Admin.module.css'
@@ -66,10 +66,10 @@ export default function Messages() {
 							<div>
 								<span>Message:</span> {message.message}
 							</div>
-							<Link href={`mailto: ${message.email}`}>
-								<a className={styles.link}>Reply</a>
-							</Link>
-							<button onClick={() => deleteMessage(message.id)}>Delete</button>
+							<Button link={`mailto: ${message.email}`}>
+								Reply
+							</Button>
+							<button className={styles.delete} onClick={() => deleteMessage(message.id)}>Delete</button>
 						</li>
 					);
 				})}
