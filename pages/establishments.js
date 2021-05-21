@@ -1,16 +1,19 @@
-import axios from "axios";
-import PropTypes from "prop-types";
-import Heading from "../components/typography/Heading";
-import EstablishmentList from '../components/establishments/EstablishmentList';
-import { BASE_URL } from "../constants/api";
+import axios from 'axios'
+import PropTypes from 'prop-types'
+import Heading from '../components/typography/Heading'
+import CardsGrid from '../components/layout/CardsGrid'
+import EstablishmentList from '../components/establishments/EstablishmentList'
+import { BASE_URL } from '../constants/api'
 
 export default function Establishments({ results }) {
     console.log(results);
 
     return (
-        <section>
-            <Heading size="1" title="Establishments"/>
-            <EstablishmentList results={ results }/>
+        <section className="heading-center">
+            <Heading size="1" title="Establishments" />
+            <CardsGrid>
+                <EstablishmentList results={ results }/>
+            </CardsGrid>
         </section>
     )
 }
