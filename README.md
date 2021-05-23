@@ -1,5 +1,5 @@
-Username: auth
-Password: Password1
+- Username: auth
+- Password: Password1
 
 # Project Exam 2
 
