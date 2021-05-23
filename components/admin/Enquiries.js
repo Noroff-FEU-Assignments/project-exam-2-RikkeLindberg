@@ -29,7 +29,7 @@ export default function Enquiries() {
 	}
 
 	async function deleteEnquiry(id) {
-		const confirmDelete = window.confirm("Delete this post?");
+		const confirmDelete = window.confirm("Are you sure you want to delete this enquiry?");
 
 		if (confirmDelete) {
 			try {

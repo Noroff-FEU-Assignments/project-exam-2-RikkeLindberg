@@ -30,7 +30,7 @@ export default function Messages() {
 	}
 
     async function deleteMessage(id) {
-		const confirmDelete = window.confirm("Delete this post?");
+		const confirmDelete = window.confirm("Are you sure you want to delete this message?");
 
 		if (confirmDelete) {
 			try {
