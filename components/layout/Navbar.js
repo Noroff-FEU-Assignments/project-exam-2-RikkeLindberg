@@ -1,4 +1,4 @@
-import { BiHomeAlt, BiUser, BiBuildingHouse, BiEnvelope } from 'react-icons/bi';
+import { BiHomeAlt, BiUser, BiBuildingHouse, BiEnvelope } from 'react-icons/bi'
 import { useContext } from 'react'
 import Link from 'next/link'
 import AuthContext from '../../context/AuthContext'
@@ -25,7 +25,7 @@ export default function Navbar() {
                     <li className={styles.item}>
                         <Link href="/establishments">
                             <a className={styles.link}>
-                                <BiBuildingHouse className={styles.icon} /> Hotels
+                                <BiBuildingHouse className={styles.icon} /> Establishments
                             </a>
                         </Link>
                     </li>

@@ -11,8 +11,7 @@
   margin: 8rem auto 0 auto;
   width: fit-content;
   border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: var(--card-shadow);
 }
 
 .image {
@@ -30,11 +29,11 @@
 .grid h3 {
   grid-column: 2 / 3;
 
-  color: #fbfbfb;
-  background-color: #0995b3;
+  color: var(--color-light);
+  background-color: var(--color-primary);
   border-top-right-radius: 1rem;
   text-transform: capitalize;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
   margin-left: -1rem;
 }
 
@@ -49,7 +48,7 @@
 
 .icon {
   font-size: 2rem;
-  color: #ff00ae;
+  color: var(--color-secondary);
   margin-right: 0.8rem;
 }
 
@@ -93,5 +92,11 @@
     grid-column: 1 / 2;
     grid-row: 6 / 7;
     margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: 240px) {
+  .grid button {
+    margin: 1rem 0;
   }
 }

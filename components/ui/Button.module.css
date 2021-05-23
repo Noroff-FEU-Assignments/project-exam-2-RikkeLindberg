@@ -1,16 +1,15 @@
 .button {
   height: 45px;
   max-width: 200px;
-
-  background-color: #ff00ae;
-  color: #fbfbfb;
+  background-color: var(--color-secondary);
+  color: var(--color-light);
 }
 
 .button:hover,
 .button:focus {
-  background-color: #00a2ff;
+  background-color: var(--color-hover);
 }
 
-.button:focus {
-  outline: 2px solid #ff00ae;
+.button:active {
+  background-color: var(--color-active);
 }

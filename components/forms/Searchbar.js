@@ -5,7 +5,7 @@ export default function Searchbar() {
         <form className={styles.form}>
             <input 
                 type="text"
-                placeholder="search.."
+                placeholder="Search here.."
                 className={styles.input}
             />
         </form>

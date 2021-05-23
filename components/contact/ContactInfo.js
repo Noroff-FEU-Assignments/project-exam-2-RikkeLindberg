@@ -5,12 +5,12 @@ import styles from './ContactInfo.module.css'
 export default function ContactInfo() {
     return (
         <div className={styles.container}>
-            <Link href="tel:5551234567">
+            <Link href="tel:47001100">
                 <a>
                     <BiPhone className={styles.icon} />
                 </a>
             </Link>
-            <Link href="mailto:webmaster@example.com">
+            <Link href="mailto:example@mail.com">
                 <a>
                     <BiEnvelope className={styles.icon} />
                 </a>

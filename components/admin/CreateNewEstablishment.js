@@ -6,7 +6,7 @@ import useAxios from '../../hooks/useAxios'
 import styles from '../forms/Forms.module.css'
 
 
-export default function AddEstablishment() {
+export default function CreateNewEstablishment() {
     const [added, setAdded] = useState(false);
     const [submitting, setSubmitting] = useState(false);
 	const [addError, setAddError] = useState(null);
@@ -41,7 +41,7 @@ export default function AddEstablishment() {
     return (
         <div className={styles.container}>
             <Heading size="1" title="Create new"/>
-
+            
             <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             { added && <p className={styles.success}>The form was submitted</p> }
 			{ addError && <p className={styles.error}>Sorry, something went wrong!</p> }

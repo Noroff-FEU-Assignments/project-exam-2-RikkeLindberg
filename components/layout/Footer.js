@@ -18,7 +18,7 @@ export default function Footer() {
                     </li>
                     <li className={styles.item}>
                         <Link href="/establishments">
-                            <a className={styles.link}>Hotels</a>
+                            <a className={styles.link}>Establishments</a>
                         </Link>
                     </li>
                     <li className={styles.item}>

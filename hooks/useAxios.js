@@ -1,7 +1,7 @@
-import { useContext } from "react";
-import axios from "axios";
-import AuthContext from "../context/AuthContext";
-import { BASE_URL } from "../constants/api";
+import axios from 'axios'
+import { useContext } from 'react'
+import AuthContext from '../context/AuthContext'
+import { BASE_URL } from '../constants/api'
 
 export default function useAxios() {
 	const [auth] = useContext(AuthContext);

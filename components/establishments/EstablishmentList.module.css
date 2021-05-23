@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #fbfbfb;
+  background-color: var(--color-light);
   border-radius: 1rem;
   padding-bottom: 1rem;
 }
 
 .link {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: var(--card-shadow);
 }
 
 .link:hover,
@@ -19,11 +18,11 @@
 
 .link:hover h4,
 .link:focus h4 {
-  background-color: #ff00ae;
+  background-color: var(--color-secondary);
 }
 
 .link:active h4 {
-  background-color: #990069;
+  background-color: var(--color-active);
 }
 
 .img {
@@ -35,8 +34,8 @@
   position: absolute;
   left: 0;
   top: 21rem;
-  color: #f1f1f1;
-  background-color: #0995b3;
+  color: var(--color-light);
+  background-color: var(--color-primary);
   width: fit-content;
   padding: 0.5rem 1rem;
   transition: 300ms;
@@ -54,13 +53,12 @@
 
 .paragraph span {
   font-weight: 500;
-  text-transform: uppercase;
   margin-right: 0.5rem;
 }
 
 .icon {
   font-size: 2.2rem;
-  color: #ff00ae;
+  color: var(--color-secondary);
   margin-right: 0.5rem;
 }
 

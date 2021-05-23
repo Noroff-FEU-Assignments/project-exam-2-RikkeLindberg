@@ -1,8 +1,8 @@
 import { BiPurchaseTag } from 'react-icons/bi';
 import PropTypes from 'prop-types'
-import Heading from '../typography/Heading'
 import Image from 'next/image'
 import Link from 'next/link'
+import Heading from '../typography/Heading'
 import styles from './EstablishmentList.module.css'
 
 function EstablishmentList({ results }) {
@@ -25,7 +25,7 @@ function EstablishmentList({ results }) {
                                     </p>
                                     <p className={styles.paragraph}>
                                         <BiPurchaseTag className={styles.icon} /> 
-                                        <span>Nok</span> { result.price }
+                                        <span>Per night:</span> { result.price },-
                                     </p>
                             </a>
                         </Link>

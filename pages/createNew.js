@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import AddEstablishment from '../components/admin/AddEstablishment';
+import DefaultErrorPage from 'next/error'
 import AuthContext from '../context/AuthContext'
-import FourOhFour from './404';
+import CreateNewEstablishment from '../components/admin/CreateNewEstablishment'
 
 export default function createNew() {
     const [auth] = useContext(AuthContext);
@@ -9,9 +9,9 @@ export default function createNew() {
     return (
         <section>
             { auth ? (
-                <AddEstablishment />
+                <CreateNewEstablishment />
                 ) : ( 
-                <FourOhFour />
+                <DefaultErrorPage />
                 )
             }
         </section>

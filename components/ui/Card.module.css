@@ -2,10 +2,9 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #fbfbfb;
+  background-color: var(--color-light);
   border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: var(--card-shadow);
 }
 
 .img {
@@ -17,8 +16,8 @@
   position: absolute;
   left: 0;
   top: 21rem;
-  color: #f1f1f1;
-  background-color: #0995b3;
+  color: var(--color-light);
+  background-color: var(--color-primary);
   width: fit-content;
   padding: 0.5rem 1rem;
 }
@@ -32,9 +31,18 @@
   margin: auto 1rem 1rem 1rem;
   padding: 1rem 1.5rem;
   max-width: fit-content;
-  background-color: #ff0066;
-  color: #fbfbfb;
+  background-color: var(--color-secondary);
+  color: var(--color-light);
   border-radius: 1rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-hover);
+}
+
+.btn:active {
+  background-color: var(--color-active);
 }
 
 .icon {

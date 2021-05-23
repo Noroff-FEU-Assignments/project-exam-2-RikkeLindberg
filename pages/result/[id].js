@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { BiPurchaseTag, BiUser } from 'react-icons/bi';
 import Image from 'next/image'
-import Link from 'next/link'
 import Button from '../../components/ui/Button';
 import Heading from '../../components/typography/Heading'
 import { BASE_URL } from '../../constants/api'
@@ -11,12 +10,6 @@ export default function Result({ result }) {
     console.log(result);
     return (
         <section className={styles.container}>
-            <Link href="/establishments">
-                <a>
-                    Go back
-                </a>
-            </Link>
-
             <div className={styles.grid}>
                 <Heading size="3" title={ result.name } />
 

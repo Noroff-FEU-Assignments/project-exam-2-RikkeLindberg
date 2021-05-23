@@ -2,8 +2,8 @@ import axios from 'axios'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useRouter } from 'next/router'
-import Heading from '../../components/typography/Heading'
 import FormButton from '../../components/ui/FormButton'
+import Heading from '../../components/typography/Heading'
 import { BASE_URL } from '../../constants/api'
 import styles from './enquiry.module.css'
 
@@ -55,7 +55,9 @@ export default function Enquiry() {
                         <input 
                             name="establishment"
                             defaultValue={slug}
-                            {...register('establishment')} />
+                            {...register('establishment', { 
+                                required: true,
+                            })} />
                     </div>
 
 					<div>

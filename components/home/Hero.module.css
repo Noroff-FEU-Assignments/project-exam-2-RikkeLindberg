@@ -13,7 +13,7 @@
 }
 
 .hero h1 {
-  color: #fbfbfb;
+  color: var(--color-light);
   line-height: 1.2;
   margin-bottom: 0.8rem;
 }
@@ -21,7 +21,7 @@
 .hero p {
   width: 100%;
   max-width: 47rem;
-  color: #fbfbfb;
+  color: var(--color-light);
   margin-bottom: 1.5rem;
 }
 

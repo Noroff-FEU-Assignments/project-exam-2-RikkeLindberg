@@ -10,15 +10,15 @@ export default function Features() {
             <div className={styles.grid}>
                 <div className={styles.card}>
                     <RiHotelFill />
-                    <Heading size="4" title="Hotels" />
+                    <Heading size="3" title="Hotels" />
                 </div>
                 <div className={styles.card}>
                     <RiHome2Fill />
-                    <Heading size="4" title="Guesthouses" />
+                    <Heading size="3" title="Guesthouses" />
                 </div>
                 <div className={styles.card}>
                     <RiHotelBedFill />
-                    <Heading size="4" title="B&#38;Bs" />
+                    <Heading size="3" title="B&#38;Bs" />
                 </div>
             </div>
         </section>

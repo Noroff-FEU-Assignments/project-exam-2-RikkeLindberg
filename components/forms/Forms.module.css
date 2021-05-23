@@ -6,10 +6,10 @@
   padding: 5rem 1rem 6rem 1rem;
   width: 100%;
   max-width: 50rem;
+  background-color: var(--color-light);
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: var(--card-shadow);
 }
 
 .form {
@@ -37,7 +37,7 @@
 .form input,
 .form textarea {
   border: none;
-  border-bottom: 1px solid #3a3a3a;
+  border-bottom: 1px solid var(--color-font);
   background-color: transparent;
   outline: none;
   font-size: 1.6rem;
@@ -50,22 +50,22 @@
 .error,
 .warning,
 .success {
-  color: #fbfbfb;
+  color: var(--color-light);
   padding: 0.5rem;
 }
 
 .error {
-  background-color: #ff0000;
+  background-color: var(--color-error);
   margin-bottom: 0.5rem;
   max-width: fit-content;
 }
 
 .warning {
-  background-color: #ff9d00;
+  background-color: var(--color-warning);
   margin-bottom: 0.5rem;
   max-width: fit-content;
 }
 
 .success {
-  background-color: #058b0c;
+  background-color: var(--color-success);
 }

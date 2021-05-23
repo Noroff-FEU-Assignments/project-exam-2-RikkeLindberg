@@ -1,8 +1,8 @@
 import axios from 'axios'
 import PropTypes from 'prop-types'
-import Heading from '../components/typography/Heading'
-import CardsGrid from '../components/layout/CardsGrid'
 import EstablishmentList from '../components/establishments/EstablishmentList'
+import CardsGrid from '../components/layout/CardsGrid'
+import Heading from '../components/typography/Heading'
 import { BASE_URL } from '../constants/api'
 
 export default function Establishments({ results }) {

@@ -42,8 +42,6 @@ export default function Enquiries() {
 		}
 	}
 
-	if (loading) return <div>Loading messages...</div>;
-
 	if (error) return <div>{}</div>;
 
 	return (

@@ -2,8 +2,8 @@ import { useContext } from 'react'
 import { useRouter } from 'next/router'
 import AuthContext from '../context/AuthContext'
 import Button from '../components/ui/Button'
+import DefaultErrorPage from 'next/error'
 import Enquiries from '../components/admin/Enquiries'
-import FourOhFour from './404'
 import Heading from '../components/typography/Heading'
 import Messages from '../components/admin/Messages'
 
@@ -18,7 +18,7 @@ export default function Admin() {
     }
 
     return (
-        <section>
+        <section className="margin-top">
             { auth ? (
                 <>
                     <Heading size="1" title="Admin dashboard" />
@@ -31,7 +31,7 @@ export default function Admin() {
                     </div>
                 </>
             ) : ( 
-                <FourOhFour /> 
+                <DefaultErrorPage /> 
                 )
             }
         </section>
