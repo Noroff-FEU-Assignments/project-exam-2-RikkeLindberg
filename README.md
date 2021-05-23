@@ -1,3 +1,6 @@
+Username: auth
+Password: Password1
+
 # Project Exam 2
 
 There are two options with this Project Exam.
