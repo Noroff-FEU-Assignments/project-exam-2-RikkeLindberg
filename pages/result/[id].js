@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { BiPurchaseTag, BiUser } from 'react-icons/bi';
+import { BiPurchaseTag, BiUser } from 'react-icons/bi'
 import Image from 'next/image'
-import Button from '../../components/ui/Button';
+import Button from '../../components/ui/Button'
 import Heading from '../../components/typography/Heading'
 import { BASE_URL } from '../../constants/api'
 import styles from './result.module.css'

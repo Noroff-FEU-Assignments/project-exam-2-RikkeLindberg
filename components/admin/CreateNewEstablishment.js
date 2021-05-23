@@ -5,7 +5,6 @@ import Heading from '../typography/Heading'
 import useAxios from '../../hooks/useAxios'
 import styles from '../forms/Forms.module.css'
 
-
 export default function CreateNewEstablishment() {
     const [added, setAdded] = useState(false);
     const [submitting, setSubmitting] = useState(false);
@@ -15,19 +14,29 @@ export default function CreateNewEstablishment() {
 
     const http = useAxios();
 
-    async function onSubmit(data) {
+    async function onSubmit() {
 		setSubmitting(true);
 		setAddError(null);
         setAdded(false);
         reset();
 
-        const formData = new FormData()
+        const dataToSend = { 
+            name: name,
+            address: address,
+            price: price,
+            max_guests: max_guests,
+            description: description,
+            slug: slug
+        };
+
+        const formData = new FormData();
         const file = image.files[0];
+
         formData.append("files.image", file);
-        formData.append("data", JSON.stringify(data));
+        formData.append("data", JSON.stringify(dataToSend));
 
 		try {
-			const response = await http.post("establishments", {data: formData});
+			const response = await http.post("establishments", formData);
 			console.log(response.data);
             setAdded(true);
 		} catch (error) {
@@ -41,6 +50,7 @@ export default function CreateNewEstablishment() {
     return (
         <div className={styles.container}>
             <Heading size="1" title="Create new"/>
+            <p className={styles.error}>Form doesn't work yet, please do not submit! It will breake the Establishment page</p>
             
             <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             { added && <p className={styles.success}>The form was submitted</p> }
@@ -51,7 +61,7 @@ export default function CreateNewEstablishment() {
                     { errors.name && errors.name.type === "required" && <p className={styles.error}>This field is required</p> }
                     <input 
                         type="text" 
-                        name="name" 
+                        name="name"
                         {...register('name', { required: true })}
                     />
                 </div>
@@ -80,6 +90,7 @@ export default function CreateNewEstablishment() {
                     <label htmlFor="max_guests">Max guests</label>
                     { errors.max_guests && errors.max_guests.type === "required" && <p className={styles.error}>This field is required</p> }
                     <input
+                        type="number"
                         name="max_guests"
                         {...register('max_guests', { required: true })}
                     />
@@ -101,7 +112,6 @@ export default function CreateNewEstablishment() {
                     <input
                         type="file"
                         name="file"
-                        id="image"
                         {...register('file', { required: true })}
                     />
                 </div>

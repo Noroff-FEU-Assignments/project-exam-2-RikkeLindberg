@@ -8,9 +8,9 @@ import Heading from '../components/typography/Heading'
 import Messages from '../components/admin/Messages'
 
 export default function Admin() {
-    const [auth, setAuth] = useContext(AuthContext)
+    const [auth, setAuth] = useContext(AuthContext);
 
-    const router = useRouter()
+    const router = useRouter();
 
     function logout() {
         setAuth(null)

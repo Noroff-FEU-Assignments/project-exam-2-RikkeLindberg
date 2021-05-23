@@ -1,4 +1,4 @@
-import { BiEnvelope, BiPhone, BiMap } from 'react-icons/bi';
+import { BiEnvelope, BiPhone, BiMap } from 'react-icons/bi'
 import Link from 'next/link'
 import styles from './ContactInfo.module.css'
 
